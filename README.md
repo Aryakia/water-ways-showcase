@@ -2,46 +2,102 @@
 
 **Mapping System Dynamics water research to the river basins, aquifers, and water systems researchers actually study.**
 
-**Repository type:** Public project showcase  
-**Project area:** Water systems · System Dynamics · GIS · research infrastructure  
-**Canonical source:** Private research repository  
-**Role:** Creator and developer
+| | |
+|---|---|
+| **Project type** | Research infrastructure · GIS · System Dynamics · water systems |
+| **Role** | Creator and developer |
+| **Status** | Active research prototype |
+| **Canonical source** | Private research repository |
+| **Public disclosure** | Curated project architecture, methods, aggregate metrics, and source attribution only |
 
 ---
 
-## Project overview
+## Executive summary
 
-Water Ways is an interactive research infrastructure project designed to connect researchers to the **water systems they study**, rather than simply mapping them to the locations of their universities or organizations.
+Water Ways is an interactive research-infrastructure project for discovering **who studies which water systems** using System Dynamics, systems thinking, and related modeling approaches.
 
-The project keeps three concepts separate:
+Most researcher maps place people at their universities. That is useful for networking, but it can misrepresent water research: the actual object of study may be a river basin, aquifer, catchment, lake, or groundwater system located far from the researcher's institution. Water Ways therefore separates **researcher identity**, **research geography**, and **affiliation geography**.
 
-1. **Researcher identity and methods** — who the researcher is and which systems approaches are associated with the work.
-2. **Research geography** — the river basins, aquifers, and water systems studied.
-3. **Affiliation geography** — institutional location, retained as profile context rather than treated as evidence of research geography.
+## Current public-safe project snapshot
+
+The working research catalogue currently contains:
+
+- **27** publication-linked river basins, aquifers, catchments, lakes, and groundwater systems
+- **34** mapped study records plus **2** relevant non-spatial method records
+- **92** distinct researchers across the evidence catalogue
+- **5** mapped peer-reviewed *System Dynamics Review* articles
+- a systematic search of accessible System Dynamics Society proceedings from **1984–2026**
+- **102** preserved researcher profiles from the original Water Ways pilot
+- **303** preserved source-derived collaboration links
+- **68** profiles with one or more source-named studied water systems
+- **40** profiles currently matched to at least one IGRAC–UNESCO 2025 transboundary-aquifer polygon
+- **292** global HydroBASINS level-3 basin areas
+- **426** IGRAC–UNESCO transboundary aquifers from the 2025 edition
+
+These figures describe the current working snapshot and may grow as literature and researcher records are reviewed.
 
 ## What I built
 
-- Researcher directory with preserved profile and affiliation context
-- River-basin and aquifer research geography
-- HydroBASINS-based global basin layer
-- IGRAC–UNESCO transboundary aquifer layer
-- Search and filtering across researchers and water systems
-- Independent map-layer controls
-- Researcher-to-water-system relationships
-- Evidence-state handling for uncertain or unmatched geography
-- Exportable research-geography records
+### Researcher + publication layer
 
-## Why it matters
+Researcher profiles preserve affiliation and profile context while keeping publication evidence separate. Publication-level records connect researchers to named study areas only when the underlying source supports that relationship.
 
-Water research is organized around physical systems that cross institutional and national boundaries. A university address does not tell us which basin or aquifer a researcher studies. Water Ways makes those research geographies visible and searchable.
+### Basin and aquifer geography
 
-## Design principle
+The platform combines two major geographic reference layers:
 
-A researcher can study multiple water systems, and a water system can be studied by multiple researchers. Source-named systems and current GIS polygon matches are treated as distinct evidence states rather than collapsed into one field.
+- **HydroBASINS v1c, Pfafstetter level 3** for global river-basin context
+- **IGRAC–UNESCO Transboundary Aquifers of the World, 2025 edition** for international groundwater context
 
-## Repository note
+The aquifer layer is explicitly treated as a transboundary inventory, not a complete map of every local aquifer on Earth.
 
-This repository is a curated public showcase. The working application, research-processing workflow, and internal development materials remain in a separate private repository.
+### Evidence-aware matching
+
+A source-named water system and a current GIS polygon match are not treated as the same evidence state. Unmatched or uncertain names remain visible for validation instead of being forced into an unsupported polygon.
+
+### Interactive research discovery
+
+The working application supports:
+
+- researcher, study, water-system, methodology, and source panels
+- basin selection → associated studies and researchers
+- search and scope filters
+- independent map-layer controls
+- deep zoom, mouse/touch navigation, pan controls, keyboard movement, and reset
+- external researcher/publication links
+- filtered research-geography export
+
+## Evidence rules
+
+1. Peer-reviewed articles, conference records, and discovery profiles remain visibly distinct.
+2. A basin-study link requires a defensible named study area in the underlying research record.
+3. One researcher may study multiple water systems.
+4. One water system may connect multiple researchers.
+5. Affiliation coordinates are context—not evidence of where research occurred.
+6. Global or methodological work remains non-spatial until a defensible study area is identified.
+7. Geographic datasets carry edition, source, license, and limitation metadata.
+
+## Research discovery approach
+
+The evidence release combines targeted researcher discovery with a systematic search of accessible annual System Dynamics Society proceedings from 1984 through 2026 and *System Dynamics Review* metadata. This is intended as a transparent discovery process, not a claim that every relevant researcher worldwide has already been found.
+
+Known limitations include uneven indexing of older proceedings, incomplete conference metadata, terminology differences across research communities, and changing geographic delineations.
+
+## Data provenance
+
+Key public sources used by the project include:
+
+- HydroSHEDS / HydroBASINS — https://www.hydrosheds.org/products/hydrobasins
+- IGRAC & UNESCO-IHP Transboundary Aquifers of the World 2025 — https://doi.org/10.58154/yb8g-cp97
+- researcher-discovery inputs derived from the SuAVE Transboundary Groundwater Research landscape and curated System Dynamics water-community records
+
+## Why this matters
+
+Water problems are organized around physical systems that cross institutional and national boundaries. A research directory that can move from **basin → study → researcher** is more useful for collaboration, literature discovery, and community building than a map of university addresses alone.
+
+## Public/private boundary
+
+This repository intentionally does **not** publish the canonical source application, raw working datasets, internal data-processing scripts, private notes, credentials, environment configuration, or unpublished research materials. It is a curated public case study of the project's purpose, architecture, methods, and aggregate results.
 
 ## Author
 
