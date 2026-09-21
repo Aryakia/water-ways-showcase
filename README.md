@@ -2,6 +2,8 @@
 
 **Mapping System Dynamics water research to the river basins, aquifers, and water systems researchers actually study.**
 
+[Explore the visual evidence-to-map diagram and project boundaries](docs/VISUAL_CASE_STUDY.md) · [Open the public case-study page](index.html)
+
 | | |
 |---|---|
 | **Project type** | Research infrastructure · GIS · System Dynamics · water systems |
