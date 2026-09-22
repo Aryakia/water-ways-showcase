@@ -2,6 +2,8 @@
 
 **Purpose:** Connect System Dynamics water-research publications to *studied water systems* rather than mistakenly using an author's institutional address as the study location. This is a public explanation of the existing project, not a release of the private application or its working data.
 
+**Start with the [evidence-to-map walkthrough and explanation of the 92 vs 102 researcher counts](RESEARCH_DISCOVERY_WALKTHROUGH.md).** It gives a worked conceptual navigation path without disclosing private records.
+
 ## Evidence-to-map diagram
 
 ```mermaid
